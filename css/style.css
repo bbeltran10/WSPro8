@@ -1,0 +1,91 @@
+/* General Page */
+body {
+    margin: 0;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #1a1a1a;
+    color: #fff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+}
+
+.container {
+    text-align: center;
+    max-width: 400px;
+    width: 90%;
+}
+
+/* Board Grid */
+.board {
+    display: grid;
+    grid-template-rows: repeat(6, 70px);
+    grid-template-columns: repeat(5, 70px);
+    gap: 10px;
+    justify-content: center;
+    margin: 20px 0;
+}
+
+/* Tiles */
+.tile {
+    background-color: #333;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 2rem;
+    font-weight: bold;
+    transition: transform 0.2s, background-color 0.3s;
+    cursor: default;
+}
+
+/* Feedback colors */
+.correct {
+    background-color: #28a745; /* green */
+    color: #fff;
+}
+
+.present {
+    background-color: #ffc107; /* yellow */
+    color: #fff;
+}
+
+.absent {
+    background-color: #6c757d; /* gray */
+    color: #fff;
+}
+
+/* Status */
+.status {
+    font-size: 1.2rem;
+    margin: 15px 0;
+}
+
+/* Button */
+.restart-btn {
+    padding: 10px 25px;
+    font-size: 1rem;
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    border-radius: 30px;
+    cursor: pointer;
+    transition: background-color 0.2s;
+}
+
+.restart-btn:hover {
+    background-color: #0056b3;
+}
+
+/* Animations for tile pop effect */
+.tile.animate {
+    transform: scale(1.2);
+    animation: pop 0.3s ease-in-out;
+}
+
+@keyframes pop {
+    0% { transform: scale(1); }
+    50% { transform: scale(1.3); }
+    100% { transform: scale(1); }
+}/* CSS Document */
+
